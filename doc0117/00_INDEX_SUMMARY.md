@@ -83,6 +83,7 @@ The Initiate Dating App is a location-based dating platform being developed with
 | 4 | **Stored Procedures Analysis** | SP vs EF analysis | [View](./03_STORED_PROCEDURES_ANALYSIS.md) |
 | 5 | **Non-Technical Guide** | For you (PM/Stakeholder) | [View](./04_NON_TECHNICAL_GUIDE.md) |
 | 6 | **Developer Code Review** | For Abhishek (Actionable) | [View](./DEVELOPER_CODE_REVIEW.md) |
+| 7 | **⭐ PM Technical Guide** | Complete architecture & management guide | [View](./PROJECT_MANAGER_TECHNICAL_GUIDE.md) |
 
 ---
 
