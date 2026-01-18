@@ -65,7 +65,7 @@ The Initiate Dating App is a location-based dating platform being developed with
 | # | Document | Review Date | Findings |
 |---|----------|-------------|----------|
 | 1 | **First Code Review** | Jan 5, 2026 | 18 issues (5 critical) | [View](../initiate/CODE_REVIEW.md) |
-| 2 | **Second Code Review** | Jan 17, 2026 | NEW - See below | [View](./01_SECOND_CODE_REVIEW.md) |
+| 2 | **Second Code Review** | Jan 17, 2026 | NEW - See below | [View](./01_SECOND_CODE_REVIEW_DETAILED.md) |
 
 #### Technical Documentation
 | # | Document | Purpose | Path |
@@ -77,11 +77,12 @@ The Initiate Dating App is a location-based dating platform being developed with
 #### Analysis Documents (Generated Today)
 | # | Document | Purpose | Location |
 |---|----------|---------|----------|
-| 1 | **Index Summary** | This document | `Initiate_App/00_INDEX_SUMMARY.md` |
-| 2 | **Second Code Review** | Comprehensive 2nd review | `Initiate_App/01_SECOND_CODE_REVIEW.md` |
-| 3 | **Architecture Comparison** | Old vs New analysis | `Initiate_App/02_ARCHITECTURE_COMPARISON.md` |
-| 4 | **Stored Procedures Analysis** | SP vs EF analysis | `Initiate_App/03_STORED_PROCEDURES_ANALYSIS.md` |
-| 5 | **Non-Technical Guide** | For you (PM/Stakeholder) | `Initiate_App/04_NON_TECHNICAL_GUIDE.md` |
+| 1 | **Index Summary** | This document | [This file](./00_INDEX_SUMMARY.md) |
+| 2 | **Second Code Review** | Comprehensive 2nd review | [View](./01_SECOND_CODE_REVIEW_DETAILED.md) |
+| 3 | **Architecture Comparison** | Old vs New analysis | [View](./02_ARCHITECTURE_COMPARISON.md) |
+| 4 | **Stored Procedures Analysis** | SP vs EF analysis | [View](./03_STORED_PROCEDURES_ANALYSIS.md) |
+| 5 | **Non-Technical Guide** | For you (PM/Stakeholder) | [View](./04_NON_TECHNICAL_GUIDE.md) |
+| 6 | **Developer Code Review** | For Abhishek (Actionable) | [View](./DEVELOPER_CODE_REVIEW.md) |
 
 ---
 
@@ -296,11 +297,11 @@ The project is using:
 ### For You (Project Manager):
 1. **Start Here:** Read this document fully
 2. **Next:** Read [Non-Technical Guide](./04_NON_TECHNICAL_GUIDE.md)
-3. **Then:** Review [Second Code Review](./01_SECOND_CODE_REVIEW.md) - Summary section only
+3. **Then:** Review [Second Code Review](./01_SECOND_CODE_REVIEW_DETAILED.md) - Summary section only
 4. **Weekly:** Check progress against [6 Week Plan](../InitiateReview/docs/6_WEEK_DELIVERY_PLAN.md)
 
 ### For Backend Developer (Abhishek):
-1. **Urgent:** Read [Second Code Review](./01_SECOND_CODE_REVIEW.md)
+1. **Urgent:** Read [Second Code Review](./01_SECOND_CODE_REVIEW_DETAILED.md)
 2. **Today:** Fix all 🔴 Critical issues
 3. **Reference:** [Stored Procedures Analysis](./03_STORED_PROCEDURES_ANALYSIS.md)
 4. **Follow:** [Developer Implementation Guide](../InitiateReview/docs/DEVELOPER_IMPLEMENTATION_GUIDE.md)
@@ -383,4 +384,4 @@ The project has made architectural progress but is behind schedule. The mobile a
 
 **END OF INDEX SUMMARY**
 
-Next Document: [Second Code Review](./01_SECOND_CODE_REVIEW.md)
+Next Document: [Second Code Review](./01_SECOND_CODE_REVIEW_DETAILED.md)
