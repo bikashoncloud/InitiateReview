@@ -33,23 +33,7 @@ response.Otp = reader["Otp"].ToString();
 
 ---
 
-### 2. Framework Choice Question
-**Current:** ASP.NET 4.7.2 Web API (2018 technology)
-**Previous:** .NET Core 8 (2023 modern technology)
-
-**Question:** Why did you switch from .NET Core 8 to ASP.NET 4.7.2?
-
-**Impact of current choice:**
-- ❌ Can't deploy to Linux/Docker
-- ❌ Can't use AWS Lambda/Azure Functions
-- ❌ Slower performance
-- ❌ Higher hosting costs
-
-**Recommendation:** Consider switching back to .NET Core 8 for better long-term maintainability.
-
----
-
-### 3. Duplicate API Projects
+### 2. Duplicate API Projects
 **Issue:** Two API projects in solution:
 - `initiate.API`
 - `initiateProject`
@@ -312,13 +296,7 @@ var schema = ConfigurationManager.AppSettings["DbSchema"];
 
 ## QUESTIONS FOR YOU
 
-### 1. Framework Choice
-Why did you choose ASP.NET 4.7.2 instead of .NET Core 8?
-- Is there a specific reason?
-- Are you more familiar with ASP.NET 4.7.2?
-- Would you be open to switching to .NET Core 8?
-
-### 2. Stored Procedures vs Entity Framework
+### 1. Stored Procedures vs Entity Framework
 Why did you choose stored procedures instead of Entity Framework?
 - Performance concerns?
 - Team preference?
@@ -329,7 +307,7 @@ Why did you choose stored procedures instead of Entity Framework?
 - Handle all CRUD operations
 - Write comprehensive tests
 
-### 3. Duplicate Projects
+### 2. Duplicate Projects
 Which API project is the active one?
 - `initiate.API` or
 - `initiateProject`

@@ -57,22 +57,17 @@ A dating app like Tinder but for the Indian market, where:
 
 ### The Concerning News ⚠️
 
-1. **Technology Downgrade**
-   - Imagine your team bought Windows 11 (latest)
-   - But developer is using Windows 8 (5 years old)
-   - **Why this matters:** Older = slower, more expensive to run, harder to deploy
-
-2. **Mobile App Not Started**
+1. **Mobile App Not Started**
    - The app that users will actually use? Not started yet
    - **Expected:** Should have started 11 days ago
    - **Reality:** Zero code written
 
-3. **Security Issues Not Fixed**
+2. **Security Issues Not Fixed**
    - Remember those 5 critical security problems from first review?
    - None of them are fixed
    - Like having a store with broken locks - need to fix before opening!
 
-4. **Very Little Actually Built**
+3. **Very Little Actually Built**
    - **Progress:** 5-10% complete
    - **Should Be:** 15% complete by now
    - **Translation:** One small feature partially working, that's it
@@ -150,28 +145,7 @@ Basement (just for storage)
 
 ## WHAT NEEDS FIXING
 
-### 1. Technology Choice (URGENT) 🔴
-
-**The Issue:**
-Developer chose ASP.NET 4.7.2 (released 2018) instead of .NET Core 8 (released 2023).
-
-**Why it matters - In Restaurant Terms:**
-- **.NET Core 8:** Like having a food truck - can set up anywhere (parking lot, beach, downtown)
-- **ASP.NET 4.7.2:** Like a traditional restaurant - needs specific building, expensive location, fixed setup
-
-**Impact on You:**
-| Factor | .NET Core 8 | ASP.NET 4.7.2 |
-|--------|-------------|---------------|
-| **Hosting Cost** | $10-30/month | $40-100/month |
-| **Setup Location** | Anywhere (cloud) | Windows servers only |
-| **Speed** | Fast sports car | Regular sedan |
-| **Future Updates** | Gets latest features | Limited updates |
-
-**Action Needed:** Ask developer "Why did you choose ASP.NET 4.7.2 instead of .NET Core 8?"
-
----
-
-### 2. Security Problems (CRITICAL) 🔴
+### 1. Security Problems (CRITICAL) 🔴
 
 **Issue #1: Password Showing**
 **Analogy:** Like a one-time code for your bank showing on your phone screen for everyone to see.
@@ -193,7 +167,7 @@ Developer chose ASP.NET 4.7.2 (released 2018) instead of .NET Core 8 (released 2
 
 ---
 
-### 3. Mobile App Not Started (BLOCKING) 🔴
+### 2. Mobile App Not Started (BLOCKING) 🔴
 
 **The Problem:**
 - The app users will actually use? Doesn't exist yet.
@@ -211,7 +185,7 @@ Building a restaurant but haven't started on the dining room yet. You have a kit
 
 ---
 
-### 4. No Testing (HIGH RISK) 🔴
+### 3. No Testing (HIGH RISK) 🔴
 
 **The Problem:**
 No automated tests = finding bugs by trial and error.
@@ -276,30 +250,7 @@ Today: Day 11
 
 ## KEY DECISIONS YOU NEED TO MAKE
 
-### Decision #1: Framework Choice (This Week)
-
-**Option A: Continue with ASP.NET 4.7.2**
-- **Pros:** Already started, no restart needed
-- **Cons:** Higher costs ($40-100/month), limited deployment, slower
-- **Timeline Impact:** None
-- **Long-term Impact:** Expensive, limited options
-
-**Option B: Switch to .NET Core 8**
-- **Pros:** Lower costs ($10-30/month), faster, better long-term
-- **Cons:** Lose 2-3 days restarting
-- **Timeline Impact:** 3 days now, but faster development after
-- **Long-term Impact:** Better maintainability, lower costs
-
-**My Recommendation:** Option B (Switch to .NET Core 8)
-- The 3-day investment pays off over remaining 34 days
-- Lower costs for lifetime of product
-- Better team velocity after initial switch
-
-**Your Action:** Schedule 30-min call with developer to discuss.
-
----
-
-### Decision #2: Scope Management (This Week)
+### Decision #1: Scope Management (This Week)
 
 **Option A: Keep All Features**
 - **Pros:** Full vision realized
@@ -330,7 +281,7 @@ Today: Day 11
 
 ---
 
-### Decision #3: Testing Approach (This Week)
+### Decision #2: Testing Approach (This Week)
 
 **Option A: Skip Automated Tests**
 - **Pros:** Saves development time
@@ -414,15 +365,16 @@ Every Friday, ask developer these questions:
 
 ## COMMON QUESTIONS
 
-### Q1: "What's the difference between .NET Core 8 and ASP.NET 4.7.2?"
+### Q1: "What technology is the project using?"
 
 **Simple Answer:**
-- **.NET Core 8:** New (2023), works anywhere, fast, cheap
-- **ASP.NET 4.7.2:** Old (2018), Windows only, slower, expensive
+The project uses **ASP.NET 4.7.2 Web API**, a mature and stable Microsoft framework for building web services.
 
-**Car Analogy:**
-- **.NET Core 8:** 2023 electric car - efficient, modern, good for long-term
-- **ASP.NET 4.7.2:** 2018 gas car - works but older, more expensive to run
+**What this means:**
+- Proven technology with extensive community support
+- Windows-based deployment
+- Good for enterprise applications
+- Well-documented with many resources available
 
 ---
 
@@ -532,9 +484,6 @@ User gets working feature
 
 ### Q6: "What questions should I ask the developer?"
 
-**Framework Choice:**
-> "I see you're using ASP.NET 4.7.2 instead of .NET Core 8. Can you explain why? What are the trade-offs?"
-
 **Security:**
 > "The first code review identified 5 critical security issues. Can you show me how these were fixed?"
 
@@ -553,29 +502,23 @@ User gets working feature
 
 **Hosting Costs (After Launch):**
 
-**With .NET Core 8:**
+**Estimated Monthly Costs:**
 ```
-Server (Linux): $15-30/month
+Server (Windows/Cloud): $40-80/month
 Database (MySQL): $10-15/month
 File Storage (Photos): $5-10/month
 SMS (OTP): $10-20/month
 Other Services: $10-20/month
 -----------------------------------
-Total: $50-95/month for 100-500 users
+Total: $75-145/month for 100-500 users
 ```
 
-**With ASP.NET 4.7.2:**
-```
-Windows Server: $40-100/month
-Database (MySQL): $10-15/month
-File Storage: $5-10/month
-SMS: $10-20/month
-Other Services: $10-20/month
------------------------------------
-Total: $75-165/month for 100-500 users
-```
-
-**Difference:** $300-840 per year extra with ASP.NET 4.7.2
+**Scaling (1000+ users):**
+- Server: $100-150/month
+- Database: $30-50/month
+- Storage: $20-30/month
+- SMS: $50-100/month
+- **Total:** $200-330/month
 
 ---
 
@@ -590,11 +533,11 @@ Total: $75-165/month for 100-500 users
 
 **Tuesday:**
 - [ ] Meeting with developer
-  - Discuss framework choice
   - Review security fixes
   - Commit to timeline
-- [ ] Make Decision #1 (Framework)
-- [ ] Make Decision #2 (Scope)
+  - Discuss scope priorities
+- [ ] Make Decision #1 (Scope)
+- [ ] Make Decision #2 (Testing approach)
 
 **Wednesday:**
 - [ ] Get Flutter developer started (critical!)
@@ -604,7 +547,7 @@ Total: $75-165/month for 100-500 users
 **Thursday:**
 - [ ] Review progress on security fixes
 - [ ] Verify Flutter project initialized
-- [ ] Make Decision #3 (Testing approach)
+- [ ] Confirm testing approach with developer
 
 **Friday:**
 - [ ] First weekly review

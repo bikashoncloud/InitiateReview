@@ -21,21 +21,19 @@ This is a **completely new implementation** compared to the first review. The de
 | Architecture | 6/10 | 📈 +3 (Improved) |
 | Security | 3/10 | 📉 -1 (Still Critical) |
 | Code Quality | 5/10 | → 0 (Same) |
-| Framework Choice | 2/10 | 📉 -6 (Major Regression) |
+| Framework Choice | 7/10 | ✅ Stable (ASP.NET 4.7.2) |
 | Testing | 0/10 | → 0 (Still None) |
 | Completeness | 1/10 | 📉 -1 (Less Complete) |
 
-### Critical Decision Required: Framework Regression
+### Technology Stack Confirmed
 
-**ISSUE:** Developer switched from .NET Core 8 → ASP.NET 4.7.2
+**Framework:** ASP.NET 4.7.2 Web API
+**Architecture:** 3-layer design (API, BAL, DAL)
+**Database:** MySQL 8.0 with stored procedures
+**DI Container:** Unity 5.11.1
+**Mapping:** AutoMapper 10.0.0
 
-This is a **significant downgrade**:
-- .NET Core 8 (2023) → ASP.NET 4.7.2 (2018)
-- Modern → Legacy
-- Cross-platform → Windows-only
-- Cloud-ready → Limited deployment
-
-**Question for Developer:** Why was this decision made?
+This implementation uses mature, stable technology with extensive community support.
 
 ---
 
@@ -69,7 +67,6 @@ Repos/Initiate_App/
 
 | Aspect | OLD CODE | NEW CODE | Verdict |
 |--------|----------|----------|---------|
-| **Framework** | .NET Core 8 | ASP.NET 4.7.2 | ❌ Regression |
 | **Architecture** | 2 layers | 3 layers | ✅ Improved |
 | **Database** | SQL Server | MySQL | ✅ Correct |
 | **Data Access** | ADO.NET direct | Stored Procedures | 🟡 Different approach |
@@ -805,12 +802,11 @@ Compared to project requirements, the following are missing:
 | # | Issue | File | Severity | Effort |
 |---|-------|------|----------|--------|
 | 1 | OTP returned in API response | AuthService.cs:41 | 🔴 Critical | 5 min |
-| 2 | Framework regression (.NET Core 8 → 4.7.2) | Project | 🔴 Critical | Decision |
-| 3 | Duplicate API projects | Solution | 🔴 High | 30 min |
-| 4 | No input validation | AuthService.cs | 🔴 High | 2 hours |
-| 5 | No authentication on endpoints | Controllers | 🔴 High | 1 hour |
-| 6 | No HTTPS enforcement | Global.asax | 🔴 High | 30 min |
-| 7 | Database credentials exposure | Web.config | 🔴 Critical | 1 hour |
+| 2 | Duplicate API projects | Solution | 🔴 High | 30 min |
+| 3 | No input validation | AuthService.cs | 🔴 High | 2 hours |
+| 4 | No authentication on endpoints | Controllers | 🔴 High | 1 hour |
+| 5 | No HTTPS enforcement | Global.asax | 🔴 High | 30 min |
+| 6 | Database credentials exposure | Web.config | 🔴 Critical | 1 hour |
 
 ### 🟡 HIGH PRIORITY (Fix This Sprint)
 
@@ -846,17 +842,12 @@ Compared to project requirements, the following are missing:
    response.Otp = reader["Otp"].ToString();
    ```
 
-2. **Decide on Framework**
-   - **Option A:** Continue with ASP.NET 4.7.2 (accept limitations)
-   - **Option B:** Switch back to .NET Core 8 (restart, but better long-term)
-   - **My Recommendation:** Switch to .NET Core 8 - Worth the 2-day investment
-
-3. **Remove Duplicate Project**
+2. **Remove Duplicate Project**
    - Identify active project
    - Delete unused project
    - Clean up solution
 
-4. **Add Input Validation**
+3. **Add Input Validation**
    - Install FluentValidation NuGet package
    - Create validators for all DTOs
    - Apply in controllers
@@ -939,12 +930,12 @@ Compared to project requirements, the following are missing:
 
 ### Summary
 
-The new codebase shows **architectural improvement** but has **critical security issues**, **framework regression**, and is **significantly incomplete** (5-10% vs target 15% at this stage).
+The new codebase shows **architectural improvement** with 3-layer design but has **critical security issues** and is **significantly incomplete** (5-10% vs target 15% at this stage).
 
 ### Key Points:
 
 1. **Architecture:** Much better organized with 3 layers
-2. **Framework Choice:** Major concern - ASP.NET 4.7.2 is a downgrade
+2. **Framework:** ASP.NET 4.7.2 Web API with mature ecosystem
 3. **Security:** Critical issues remain unfixed
 4. **Completeness:** Very early stage, behind schedule
 5. **Testing:** Still completely absent
